@@ -1,0 +1,24 @@
+﻿@page "/"
+
+@{
+    string nama = "Son";
+}
+
+<PageTitle>Halo, @nama </PageTitle>
+
+<h1>MBOH NYOH</h1>
+
+Kelas Programan web
+
+<hr />
+
+<input type="text" @onchange ="InputChanged"/>
+<p>@message</p>
+
+@code{
+    string message = "";
+    void InputChanged(ChangeEventArgs e)
+    {
+        message = (string)e.Value;
+    }
+}
